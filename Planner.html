@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <title>Planner</title>
+        <link rel="stylesheet" href="Planner.css">
+        <link rel="stylesheet" href="Goal.css">
+    </head>
+    <body>
+      <div class="nav1">
+        <div class="menu1">Planner</div>
+        <div><a href="todo.html"  class="menu2">Daily</a></div>
+        <div class="menu3" onclick="toggleGoal()">Goal</div>
+      </div>
+      <div id="Goal" style="display: none;">
+          <div class="nav2">
+            <div>Goal</div>
+          </div>
+          <table class="top">
+            <thead><tr><th>상위 목표</th></tr></thead>
+            <tbody><tr><td>
+              <input id="topitem" type="text" placeholder="목표 입력">
+              <button type="button" onclick="addItem('topitem')">+</button>
+            </td></tr></tbody>
+          </table>
+          <table class="middle">
+            <thead><tr><th>중간 목표</th></tr></thead>
+            <tbody><tr><td>
+              <input id="middleitem" type="text" placeholder="목표 입력">
+              <button type="button" onclick="addItem('middleitem')">+</button>
+            </td></tr></tbody>
+          </table>
+          <table class="bottom">
+            <thead><tr><th>하위 목표</th></tr></thead>
+            <tbody><tr><td>
+              <input id="bottomitem" type="text" placeholder="목표 입력">
+              <button type="button" onclick="addItem('bottomitem')">+</button>
+            </td></tr></tbody>
+          </table>
+      </div>
+      
+      <div class='rap'>
+        <div class="header">
+          <h2 class='dateTitle'></h2>
+          <div class="btn prevDay"></div>
+          <div>
+            <input id="cho_date" type="date">
+            <input id="eventInput" type="text" placeholder="일정 입력">
+            <button class="addEventBtn" onclick="addEvent()">일정 추가</button>
+          </div>
+          <div class="btn nextDay"></div>
+        </div>
+        
+        <div class="grid dateHead">
+          <b><div style="color: red;">일</div></b>
+          <b><div>월</div></b>
+          <b><div>화</div></b>
+          <b><div>수</div></b>
+          <b><div>목</div></b>
+          <b><div>금</div></b>
+          <b><div style="color:blue;">토</div></b>
+        </div>
+    
+        <div class="grid dateBoard"></div>
+      </div>
+      <script src="Planner.js"></script>
+      <script src="Goal.js"></script>
+    </body>
+</html>
